@@ -35,9 +35,8 @@ class ProductManagerTest {
     void shouldNotFindIfNotExist() {
         int idToFind = 4;
         manager.findById(idToFind);
-        Product expected = null;
         Product actual = manager.findById(idToFind);
-        assertEquals(expected, actual);
+        assertNull(actual);
     }
 
     @Test
@@ -45,7 +44,7 @@ class ProductManagerTest {
         int idToFind = 2;
         manager.removeById(idToFind);
         Product actual = manager.findById(idToFind);
-        assertEquals(null, actual);
+        assertNull(actual);
     }
 
     @Test

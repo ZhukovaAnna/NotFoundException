@@ -38,7 +38,7 @@ class ProductRepositoryTest {
         int idToFind = 1;
         repository.findById(idToFind);
         Product expected = first;
-        Product actual = repository.findById(1);
+        Product actual = repository.findById(idToFind);
         assertEquals(expected, actual);
     }
 
