@@ -45,7 +45,7 @@ class ProductManagerTest {
         int idToFind = 2;
         manager.removeById(idToFind);
         Product actual = manager.findById(idToFind);
-        assertEquals(null,actual);
+        assertEquals(null, actual);
     }
 
     @Test
