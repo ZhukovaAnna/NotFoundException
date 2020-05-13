@@ -47,7 +47,7 @@ class ProductRepositoryTest {
         int idToFind = 3;
         repository.findById(idToFind);
         Product actual = repository.findById(idToFind);
-        assertEquals(null, actual);
+        assertNull(actual);
     }
 
     @Test
