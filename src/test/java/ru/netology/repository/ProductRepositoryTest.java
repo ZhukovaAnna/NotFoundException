@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.TShirt;
+import ru.netology.exception.NotFoundException;
 import ru.netology.manager.ProductManager;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,6 +65,6 @@ class ProductRepositoryTest {
     @Test
     void shouldNotRemoveIfNotExists() {
         int idToRemove = 5;
-        assertThrows(RuntimeException.class, () -> repository.removeById(idToRemove));
+        assertThrows(NotFoundException.class, () -> repository.removeById(idToRemove));
     }
 }
